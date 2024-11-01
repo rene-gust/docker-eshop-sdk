@@ -1,3 +1,5 @@
 .idea
 .env
-/docker-compose.yml
+docker-compose.yml
+recipes/module-paypal/environment/1.yaml
+containers/php/xdebug.ini

@@ -36,8 +36,11 @@ example:
 	@make addbasicservices
 	@./recipes/default/example/run.sh
 
+build:
+	docker compose up --build -d --force-recreate
+
 up:
-	docker compose up --build -d
+	docker compose up -d
 
 down:
 	docker compose down --remove-orphans
@@ -76,3 +79,9 @@ cleanup:
 	-[ -e "containers/php/custom.ini" ] && rm containers/php/custom.ini
 	-[ -d "data/mysql" ] && rm -rf data/mysql/*
 	-[ -d "data/composer/cache" ] && rm -rf data/composer/cache
+
+xdebug-on:
+	containers/php/xdebug.sh on
+
+xdebug-off:
+	containers/php/xdebug.sh off

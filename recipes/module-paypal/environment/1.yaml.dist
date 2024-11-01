@@ -1,0 +1,17 @@
+modules:
+  osc_paypal:
+    moduleSettings:
+      oscPayPalSandboxClientId:
+        value: <client_id>
+      oscPayPalSandboxMode:
+        value: true
+      oscPayPalSandboxClientSecret:
+        value: <client_secret>
+      oscPayPalSandboxWebhookId:
+        value: <webhook_id>
+      oscPayPalSandboxAcdcEligibility:
+        value: true
+      oscPayPalSandboxPuiEligibility:
+        value: true
+      oscPayPalSandboxClientMerchantId:
+        value: <client_merchant_id>
