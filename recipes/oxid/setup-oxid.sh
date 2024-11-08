@@ -6,7 +6,9 @@ SCRIPT_PATH=$(dirname ${BASH_SOURCE[0]})
 
 cd $SCRIPT_PATH/../../ || exit
 
-composer create-project --no-dev oxid-esales/oxideshop-project oxideshop dev-b-6.5-ce
+source recipes/oxid/setup-oxid/ask-version.sh
+
+composer create-project --no-dev oxid-esales/oxideshop-project oxideshop dev-b-$selected_version-ce
 
 cd oxideshop
 
@@ -30,10 +32,6 @@ perl -pi\
 
 composer config github-protocols https
 
-# Configure Tests dependencies
-composer require codeception/module-rest ^1.4.2 --dev --no-update
-composer require codeception/module-phpbrowser ^1.0.2 --dev --no-update
-
 composer update
 
 chmod 775 source/out/pictures
@@ -41,7 +39,5 @@ chmod 775 source/out/media
 chmod 775 source/log
 chmod 775 source/export
 chmod 775 source/tmp
-
-php bin/oe-console oe:module:apply-configuration
 
 echo "Done!"
