@@ -8,6 +8,8 @@
         HOST_GROUP_ID: ${HOST_GROUP_ID}
         HOST_USER_NAME: ${HOST_USER_NAME}
         HOST_GROUP_NAME: ${HOST_GROUP_NAME}
+    environment:
+      PHP_IDE_CONFIG: "serverName=oxideshop.local"
     links:
       - "apache:localhost.local"
       - "apache:oxideshop.local"

@@ -7,8 +7,9 @@ SCRIPT_PATH=$(dirname ${BASH_SOURCE[0]})
 cd $SCRIPT_PATH/../../ || exit
 
 source recipes/oxid/setup-oxid/ask-version.sh
+source recipes/oxid/setup-oxid/ask-edition.sh
 
-composer create-project --no-dev oxid-esales/oxideshop-project oxideshop dev-b-$selected_version-ce
+composer create-project --no-dev oxid-esales/oxideshop-project oxideshop dev-b-$selected_version-$selected_edition
 
 cd oxideshop
 

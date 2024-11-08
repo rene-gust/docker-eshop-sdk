@@ -1,6 +1,6 @@
 #!/bin/bash
 # Display options to the user
-echo "Please select an option:"
+echo "Please select the shop version:"
 echo "1) 6.5"
 echo "2) 7.0"
 
