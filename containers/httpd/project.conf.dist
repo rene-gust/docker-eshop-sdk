@@ -1,17 +1,17 @@
-DocumentRoot "/var/www/"
-<Directory "/var/www/">
+DocumentRoot "/var/www/source/oxideshop/source"
+<Directory "/var/www/source/oxideshop/source">
     Options Indexes FollowSymLinks
     AllowOverride All
     Require all granted
 </Directory>
 
 <VirtualHost _default_:443>
-    DocumentRoot "/var/www/"
+    DocumentRoot "/var/www/source/oxideshop/source"
     ServerName localhost.local
     ServerAlias oxideshop.local
 
     SSLEngine on
-    <Directory "/var/www/">
+    <Directory "/var/www/source/oxideshop/source">
         AllowOverride All
         Require all granted
     </Directory>

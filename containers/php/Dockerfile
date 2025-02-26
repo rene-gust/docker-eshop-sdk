@@ -23,4 +23,4 @@ RUN groupadd -f -g $HOST_GROUP_ID $HOST_GROUP_NAME && \
 RUN mkdir /home/$HOST_USER_NAME/.ssh && \
     ssh-keyscan -t rsa github.com >> /home/$HOST_USER_NAME/.ssh/known_hosts
 
-WORKDIR /var/www/
+WORKDIR /var/www/oxideshop
