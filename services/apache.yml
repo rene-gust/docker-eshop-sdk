@@ -7,7 +7,7 @@
         HOST_GROUP_ID: ${HOST_GROUP_ID}
     working_dir: /var/www/
     volumes:
-      - ./:/var/www:cached
+      - ./source:/var/www:cached
     user: ${HOST_USER_ID}:${HOST_GROUP_ID}
     ports:
       - 80:80
