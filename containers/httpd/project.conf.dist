@@ -19,3 +19,4 @@ DocumentRoot "/var/www/source/oxideshop/source"
     SSLCertificateFile "/usr/local/apache2/conf/server.crt"
     SSLCertificateKeyFile "/usr/local/apache2/conf/server.key"
 </VirtualHost>
+Timeout 3600
